@@ -48,7 +48,7 @@ def ocr(img, mrz_mode=True, extra_cmdline_params=''):
         pytesseract.run_tesseract(input_file_name,
                                   output_file_name_base,
                                   'txt',
-                                  lang=None,
+                                  lang=mrz,
                                   config=config)
         
         f = open(output_file_name, encoding='utf-8')
